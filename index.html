@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rainbow Six Siege</title>
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>    
+
+    <section id="home">
+        <h1>Rainbow Six Siege Fan Site</h1>
+        <video controls autoplay muted loop class="gameplay-video">
+            <source src="vid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+    
+ 
+    <section id="description">
+        <h2>Description of Game</h2>
+        <img src="cover.jpg" alt="Game Description Image">
+        <p>This is a brief description of Rainbow Six Siege...</p>
+    </section>
+
+    <section id="amazing">
+        <h2>Why It’s an Amazing Game</h2>
+        <img src="siegecover.jpg" alt="Amazing Game Image">
+        <p>Explanation of why Rainbow Six Siege is highly regarded...</p>
+    </section>
+
+    <section id="high-iq">
+        <h2>High IQ Players</h2>
+        <img src="iq.png" alt="High IQ Players Image">
+        <p>Discussion on the skill and intelligence involved in this game...</p>
+    </section>
+
+ 
+    <section id="jynxzi">
+        <h2>Jynxzi - The One That "Revived" Siege</h2>
+        <img src="jynxzi.jpg" alt="Jynxzi Image">
+        <p>Details about Jynxzi and his streaming content...</p>
+    </section>
+
+ 
+    <section id="maps">
+        <h2>Maps</h2>
+        <p>Here’s a brief description of the different maps in Rainbow Six Siege.</p>
+        <img src="maps.jpg" alt="All Maps Image">
+    </section>
+
+
+    <section id="ranks">
+        <h2>Ranks</h2>
+        <p>Description of ranks and levels in Rainbow Six Siege...</p>
+        <img src="ranks.jpg" alt="Rank Symbol Image">
+    </section>
+
+    
+    <section id="about">
+        <h2>Most Used Operators</h2>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="ash.png" alt="Ash" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="thatcher.png" alt="Thatcher" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="jager.png" alt="Jäger" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="bandit.png" alt="Bandit" style="width:100%">
+            </div>
+        </div>
+    </section>
+
+    <script>
+  
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex - 1].style.display = "block";  
+            setTimeout(showSlides, 2000); 
+        }
+
+    
+        document.addEventListener('mousemove', (event) => {
+            const trail = document.createElement('div');
+            trail.classList.add('mouse-trail');
+            document.body.appendChild(trail);
+
+           
+            trail.style.left = `${event.pageX}px`;
+            trail.style.top = `${event.pageY}px`;
+
+         
+            setTimeout(() => {
+                trail.remove();
+            }, 300); 
+        });
+    </script>
+</body>
+</html>
